@@ -33,7 +33,7 @@ TextEditor.prototype.cursorLeft = function (numberOfCharsToMoveToLeft) {
     while (numberOfCharsToMoveToLeft-- > 0) {
         this.textRightToCursor.push(this.textLeftToCursor.pop());
     }
-    return  composeTextToDisplay();
+    return  this.composeTextToDisplay();
 };
 
 /** 
@@ -45,7 +45,7 @@ TextEditor.prototype.cursorRight = function (numberOfCharsToMoveToRight) {
     while (numberOfCharsToMoveToRight-- > 0) {
         this.textLeftToCursor.push(this.textRightToCursor.pop());
     }
-    return composeTextToDisplay();
+    return this.composeTextToDisplay();
 };
 
 /** 
